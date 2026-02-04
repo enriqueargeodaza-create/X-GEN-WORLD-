@@ -3,118 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-GEN | Futuro</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>X-GEN WORLD | MEGA IA INTERFACE</title>
     <style>
-        :root {
-            --neon: #00f2ff;
-            --purple: #7000ff;
-            --bg: #020617;
-        }
-
-        body {
-            background-color: var(--bg);
-            color: white;
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            width: 100%;
-            padding: 20px;
-            background: rgba(2, 6, 23, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            position: sticky;
-            top: 0;
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 900;
-            background: linear-gradient(to right, var(--neon), var(--purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 5px;
-        }
-
-        .feed {
-            width: 90%;
-            max-width: 500px;
-            margin-top: 20px;
-            padding-bottom: 100px;
-        }
-
-        .post {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 15px;
-        }
-
-        .nav-bar {
-            position: fixed;
-            bottom: 20px;
-            width: 85%;
-            max-width: 400px;
-            height: 65px;
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(15px);
-            border-radius: 35px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-
-        .add-btn {
-            width: 50px;
-            height: 50px;
-            background: white;
-            color: black;
-            border-radius: 50%;
-            border: none;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 0 15px white;
-        }
+        :root { --neon: #00f2ff; --bg: #0d1117; --card: #161b22; --active: #39d353; }
+        body { background-color: var(--bg); color: white; font-family: 'Courier New', monospace; margin: 0; overflow-x: hidden; }
+        
+        /* Animación de escaneo */
+        .scanner { width: 100%; height: 3px; background: var(--neon); position: fixed; top: 0; z-index: 1000; box-shadow: 0 0 15px var(--neon); animation: scan 4s infinite linear; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100vh; } }
+        
+        header { padding: 40px 20px; border-bottom: 1px solid var(--neon); text-align: center; background: rgba(22, 27, 34, 0.8); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 40px; }
+        
+        .ia-card { background: var(--card); border: 1px solid #30363d; padding: 25px; border-radius: 10px; transition: 0.3s; position: relative; }
+        .ia-card:hover { border-color: var(--neon); box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); transform: scale(1.02); }
+        
+        .btn-act { display: block; width: 100%; padding: 12px; margin-top: 15px; background: transparent; border: 1px solid var(--neon); color: var(--neon); cursor: pointer; text-decoration: none; text-align: center; font-weight: bold; font-size: 0.9em; }
+        .btn-act:hover { background: var(--neon); color: black; box-shadow: 0 0 10px var(--neon); }
+        
+        .status-dot { height: 10px; width: 10px; background-color: var(--active); border-radius: 50%; display: inline-block; margin-right: 5px; box-shadow: 0 0 8px var(--active); }
+        
+        /* Consola de sistema */
+        #console { background: black; color: var(--active); padding: 15px; margin: 0 40px; border-radius: 5px; font-size: 0.8em; height: 100px; overflow-y: hidden; border: 1px solid #333; }
     </style>
 </head>
 <body>
+    <div class="scanner"></div>
 
     <header>
-        <div class="logo">X-GEN</div>
+        <h1 style="color: var(--neon); font-size: 2.2em; text-shadow: 0 0 10px var(--neon);">X-GEN WORLD SYSTEM v2.0</h1>
+        <p><span class="status-dot"></span> NÚCLEO ACTIVO: VENEZUELA-HUB</p>
+        <code style="color: #8b949e;">LOGGED AS: enriqueargeodaza-crear</code>
     </header>
 
-    <main class="feed" id="feed">
-        <div class="post">
-            <strong>@Sistema</strong>
-            <p>Bienvenido a X-GEN. El código ha sido desplegado con éxito. 🚀</p>
-        </div>
-    </main>
+    <div id="console">
+        <div>> Iniciando protocolos de IA...</div>
+        <div>> Conectando con GitHub Actions...</div>
+        <div>> Enlazando bases de datos de Google Gemini & OpenAI...</div>
+        <div id="loading-text">> Sistema cargado al 100% - Esperando comandos...</div>
+    </div>
 
-    <nav class="nav-bar">
-        <i class="fas fa-home"></i>
-        <button class="add-btn" onclick="postear()">+</button>
-        <i class="fas fa-user"></i>
-    </nav>
+    <div class="grid">
+        <div class="ia-card">
+            <h3>🧠 NÚCLEO COGNITIVO</h3>
+            <p>Multimodelo: Gemini 1.5 & GPT-4o. Análisis de texto y lógica avanzada.</p>
+            <a href="https://gemini.google.com" target="_blank" class="btn-act">EJECUTAR PENSAMIENTO</a>
+        </div>
+
+        <div class="ia-card">
+            <h3>🎨 MOTOR DE IMAGEN</h3>
+            <p>Generación vía Stable Diffusion XL. Crea activos visuales para la red.</p>
+            <a href="https://dreamstudio.ai/" target="_blank" class="btn-act">RENDERIZAR ARTE</a>
+        </div>
+
+        <div class="ia-card">
+            <h3>🎬 VIDEO GEN (VEO)</h3>
+            <p>Creación de clips cinematográficos mediante inteligencia artificial Sora/Veo.</p>
+            <a href="https://runwayml.com/" target="_blank" class="btn-act">GENERAR VIDEO</a>
+        </div>
+
+        <div class="ia-card">
+            <h3>💻 AUTO-CORE REPAIR</h3>
+            <p>Sincronización con Copilot para mantener el código de X-GEN libre de bugs.</p>
+            <a href="https://github.com/features/copilot" target="_blank" class="btn-act">REVISAR REPOSITORIO</a>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #8b949e; font-size: 0.8em;">
+        <p>ENCRIPTACIÓN: AES-256 | PROTOCOLO: X-GEN | 2026</p>
+    </footer>
 
     <script>
-        function postear() {
-            const msg = prompt("¿Qué piensas hoy?");
-            if(msg) {
-                const feed = document.getElementById('feed');
-                const div = document.createElement('div');
-                div.className = 'post';
-                div.innerHTML = `<strong>@Tú</strong><p>${msg}</p>`;
-                feed.prepend(div);
-            }
-        }
+        // Simulación de actividad del sistema
+        const consoleDiv = document.getElementById('console');
+        const messages = [
+            "> Escaneando vulnerabilidades...",
+            "> Optimizando respuesta de red...",
+            "> Sincronizando con satélites locales...",
+            "> X-GEN WORLD: Estado Estable."
+        ];
+        let i = 0;
+        setInterval(() => {
+            const p = document.createElement('div');
+            p.textContent = messages[i % messages.length];
+            consoleDiv.appendChild(p);
+            if(consoleDiv.childNodes.length > 6) consoleDiv.removeChild(consoleDiv.firstChild);
+            i++;
+        }, 3000);
     </script>
 </body>
 </html>
