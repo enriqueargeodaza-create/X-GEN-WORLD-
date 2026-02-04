@@ -2,17 +2,44 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>X-GEN WORLD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-GEN RED SOCIAL</title>
     <style>
-        body { background: #010409; color: #00f2ff; text-align: center; font-family: Arial; padding-top: 50px; }
-        .box { border: 2px solid #7000ff; padding: 20px; display: inline-block; border-radius: 15px; }
+        body { font-family: Arial, sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; }
+        header { background-color: #1877f2; color: white; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 100; }
+        .container { max-width: 600px; margin: 20px auto; padding: 10px; }
+        .post-box { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        textarea { width: 100%; border: 1px solid #ddd; border-radius: 5px; padding: 10px; resize: none; box-sizing: border-box; }
+        button { background-color: #1877f2; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-weight: bold; }
+        .feed-post { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-bottom: 15px; }
+        .user-name { font-weight: bold; color: #1c1e21; margin-bottom: 5px; }
+        .post-content { color: #4b4f56; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h1>X-GEN WORLD</h1>
-        <p>SISTEMA OPERATIVO ONLINE</p>
-        <button onclick="alert('¡Bienvenido!')">ENTRAR</button>
+
+    <header>
+        <h1>X-GEN SOCIAL</h1>
+    </header>
+
+    <div class="container">
+        <div class="post-box">
+            <textarea placeholder="¿Qué estás pensando?" rows="3"></textarea>
+            <button onclick="alert('¡Publicado en X-GEN!')">Publicar</button>
+        </div>
+
+        <div id="feed">
+            <div class="feed-post">
+                <div class="user-name">Administrador X-GEN</div>
+                <div class="post-content">¡Bienvenidos a nuestra nueva red social! Ya estamos en línea.</div>
+            </div>
+            
+            <div class="feed-post">
+                <div class="user-name">Sistema</div>
+                <div class="post-content">GitHub Pages ha desplegado este sitio con éxito.</div>
+            </div>
+        </div>
     </div>
+
 </body>
 </html>
