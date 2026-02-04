@@ -67,3 +67,4 @@
             <input type="file" id="fileInput" style="display:none" onchange="fileAlert()">
             <button onclick="document.getElementById('fileInput').click()" style="padding:15px; width:100%; background:var(--neon); border:none; border-radius:5px; font-weight:bold; cursor:pointer">SUBIR ARCHIVO PARA IA</button>
             <p style="font-size:0.7em; margin-top:
+
