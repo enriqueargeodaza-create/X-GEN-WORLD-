@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-GEN WORLD | MULTICONEXIÓN GLOBAL</title>
+    <style>
+        :root { --neon: #00f2ff; --bg: #0d1117; --card: #161b22; --active: #39d353; --accent: #7928ca; }
+        body { background: var(--bg); color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; overflow-x: hidden; }
+        
+        .scanner { width: 100%; height: 2px; background: var(--neon); position: fixed; top: 0; z-index: 1000; animation: scan 3s infinite linear; }
+        @keyframes scan { 0% { top: 0; } 100% { top: 100vh; } }
+
+        header { padding: 20px; border-bottom: 2px solid var(--neon); text-align: center; background: rgba(0,0,0,0.8); }
+
+        /* BARRA MULTICONEXIÓN DINÁMICA */
+        .social-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; padding: 15px; background: #000; border-bottom: 1px solid var(--neon); }
+        .social-btn { padding: 8px; font-size: 0.7em; text-align: center; border: 1px solid #333; color: white; text-decoration: none; border-radius: 5px; transition: 0.3s; background: #161b22; }
+        .social-btn:hover { border-color: var(--neon); background: var(--accent); transform: scale(1.05); }
+
+        .container { padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .ia-card { background: var(--card); border-radius: 15px; border: 1px solid #30363d; padding: 25px; text-align: center; }
+
+        /* MICRÓFONO IA */
+        #mic-wrap { margin: 20px auto; width: 100px; height: 100px; }
+        #mic-btn { width: 100%; height: 100%; border-radius: 50%; background: none; border: 4px solid var(--neon); color: var(--neon); font-size: 2.5em; cursor: pointer; transition: 0.4s; }
+        .active-mic { box-shadow: 0 0 30px var(--neon); background: var(--neon) !important; color: black !important; }
+
+        #log { font-family: 'Courier New', monospace; background: #000; color: var(--active); padding: 15px; border-radius: 5px; font-size: 0.8em; margin-top: 10px; min-height: 40px; }
+    </style>
+</head>
+<body>
+    <div class="scanner"></div>
+
+    <header>
+        <h1 style="margin:0;">X-GEN WORLD <span style="color:var(--neon)">MULTICONNECT</span></h1>
+        <p style="font-size:0.8em; color:var(--active)">SISTEMA IA INTEGRADO - VENEZUELA HUB</p>
+    </header>
+
+    <div class="social-grid">
+        <a href="https://wa.me/" class="social-btn">WHATSAPP</a>
+        <a href="https://t.me/" class="social-btn">TELEGRAM</a>
+        <a href="https://facebook.com" class="social-btn">FACEBOOK</a>
+        <a href="https://instagram.com" class="social-btn">INSTAGRAM</a>
+        <a href="https://x.com" class="social-btn">X / TWITTER</a>
+        <a href="https://tiktok.com" class="social-btn">TIKTOK</a>
+        <a href="https://linkedin.com" class="social-btn">LINKEDIN</a>
+        <a href="https://youtube.com" class="social-btn">YOUTUBE</a>
+        <a href="https://threads.net" class="social-btn">THREADS</a>
+        <a href="https://twitch.tv" class="social-btn">TWITCH</a>
+        <a href="https://rumble.com" class="social-btn">RUMBLE</a>
+        <a href="https://discord.com" class="social-btn">DISCORD</a>
+    </div>
+
+    <div class="container">
+        <div class="ia-card">
+            <h3>🎙️ ACTIVACIÓN POR VOZ</h3>
+            <div id="mic-wrap">
+                <button id="mic-btn" onclick="startIA()">🎤</button>
+            </div>
+            <div id="log">> SISTEMA LISTO PARA RECIBIR COMANDOS...</div>
+        </div>
+
+        <div class="ia-card">
+            <h3>📂 MULTIMEDIA & DOCUMENTOS</h3>
+            <p>Sube Fotos, Videos o PDFs para análisis automático con IA.</p>
+            <input type="file" id="fileInput" style="display:none" onchange="fileAlert()">
+            <button onclick="document.getElementById('fileInput').click()" style="padding:15px; width:100%; background:var(--neon); border:none; border-radius:5px; font-weight:bold; cursor:pointer">SUBIR ARCHIVO PARA IA</button>
+            <p style="font-size:0.7em; margin-top:
