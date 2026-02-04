@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X-GEN WORLD | MEGA IA INTERFACE</title>
+    <title>MUNDO DE LA GENTE MRQ@| MEGA IA INTERFACE</title>
     <style>
         :root { --neon: #00f2ff; --bg: #0d1117; --card: #161b22; --active: #39d353; }
         body { background-color: var(--bg); color: white; font-family: 'Courier New', monospace; margin: 0; overflow-x: hidden; }
