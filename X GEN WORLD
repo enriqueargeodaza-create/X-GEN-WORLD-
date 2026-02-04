@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html>
+<body style="background:#010409; color:#00f2ff; text-align:center; font-family:sans-serif; padding-top:100px;">
+    <h1 style="letter-spacing:10px;">X-GEN</h1>
+    <p>RED SOCIAL ACTIVA</p>
+    <button style="padding:15px 30px; border-radius:50px; border:none; background:white; font-weight:bold; box-shadow: 0 0 20px #00f2ff;">ENTRAR</button>
+</body>
+</html>
